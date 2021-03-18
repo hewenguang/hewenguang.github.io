@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>网页正文提取算法研究学习 | 染河学长</title>
+<title>进程和线程的区别及相互之间的通信 | 染河学长</title>
 
 <link rel="shortcut icon" href="https://ranhe.xyz/favicon.ico?v=1616087275026">
 <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -88,27 +88,19 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    网页正文提取算法研究学习
+                    进程和线程的区别及相互之间的通信
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2021-03-17 ·
+                        · 2021-03-18 ·
                     </time>
                     
-                        <a href="https://ranhe.xyz/zheng-wen-ti-qu/" class="post-tags">
-                            # 正文提取
+                        <a href="https://ranhe.xyz/ji-suan-ji-ji-chu/" class="post-tags">
+                            # 计算机基础
                         </a>
                     
                         <a href="https://ranhe.xyz/qian-duan-kai-fa/" class="post-tags">
                             # 前端开发
-                        </a>
-                    
-                        <a href="https://ranhe.xyz/liu-lan-qi/" class="post-tags">
-                            # 浏览器
-                        </a>
-                    
-                        <a href="https://ranhe.xyz/yue-du-mo-shi/" class="post-tags">
-                            # 阅读模式
                         </a>
                     
                 </div>
@@ -120,77 +112,69 @@
 </script>
 
                 <div class="post-content">
-                    <figure data-type="image" tabindex="1"><img src="https://ranhe.xyz/post-images/1615962620318.jpeg" alt="网页正文提取算法研究" loading="lazy"></figure>
-<h2 id="引言">引言</h2>
-<p>网站数据的抓取分析是当今众多互联网业务中非常重要的组成部分，舆情分析、网络搜索、定向广告等都涉及到大量的数据采集分析。面对采集下来的各种各样的网页，分析并识别正文则是一个更加具有挑战性的工作</p>
-<p>本文档分为如下部分：</p>
+                    <p>进程与线程的概念，以及为什么要有进程线程，其中有什么区别，他们各自又是怎么同步的?</p>
+<h2 id="基本概念">基本概念</h2>
+<p>进程是对运行时程序的封装，是系统进行资源调度和分配的的基本单位，实现了操作系统的并发</p>
+<p>线程是进程的子任务，是CPU调度和分派的基本单位，用于保证程序的实时性，实现进程内部的并发；线程是操作系统可识别的最小执行和调度单位。每个线程都独自占用一个虚拟处理器：独自的寄存器组，指令计数器和处理器状态。每个线程完成不同的任务，但是共享同一地址空间（也就是同样的动态内存，映射文件，目标代码等等），打开的文件队列和其他内核资源</p>
+<h2 id="区别">区别</h2>
+<p>一个线程只能属于一个进程，而一个进程可以有多个线程，但至少有一个线程，线程依赖于进程而存在</p>
+<p>进程在执行过程中拥有独立的内存单元，而多个线程共享进程的内存（资源分配给进程，同一进程的所有线程共享该进程的所有资源。同一进程中的多个线程共享代码段（代码和常量），数据段（全局变量和静态变量），扩展段（堆存储）。但是每个线程拥有自己的栈段，栈段又叫运行时段，用来存放所有局部变量和临时变量）</p>
+<p>进程是资源分配的最小单位，线程是 CPU 调度的最小单位</p>
+<h3 id="系统开销">系统开销</h3>
+<p>由于在创建或撤消进程时，系统都要为之分配或回收资源，如内存空间、I／O 设备等。因此，操作系统所付出的开销将显著地大于在创建或撤消线程时的开销。类似地，在进行进程切换时，涉及到整个当前进程 CPU 环境的保存以及新被调度运行的进程的 CPU 环境的设置。而线程切换只须保存和设置少量寄存器的内容，并不涉及存储器管理方面的操作。可见，进程切换的开销也远大于线程切换的开销。</p>
+<h3 id="通信">通信</h3>
+<p>由于同一进程中的多个线程具有相同的地址空间，致使它们之间的同步和通信的实现，也变得比较容易。进程间通信 IPC ，线程间可以直接读写进程数据段（如全局变量）来进行通信 —— 需要进程同步和互斥手段的辅助，以保证数据的一致性。在有的系统中，线程的切换、同步和通信都无须操作系统内核的干预</p>
+<p>进程编程调试简单可靠性高，但是创建销毁开销大；线程正相反，开销小，切换速度快，但是编程调试相对复杂</p>
+<p>进程间不会相互影响，线程一个线程挂掉将导致整个进程挂掉</p>
+<p>进程适应于多核、多机分布；线程适用于多核</p>
+<p><strong>进程间通信的方式</strong></p>
+<p>进程间通信主要包括管道、系统 IPC（包括消息队列、信号量、信号、共享内存等）、以及套接字 socket</p>
+<p>1 管道</p>
+<p>管道主要包括匿名管道和命名管道:管道可用于具有亲缘关系的父子进程间的通信，命名管道除了具有管道所具有的功能外，它还允许无亲缘关系进程间的通信</p>
+<p>1.1 匿名管道PIPE</p>
+<p>它是半双工的（即数据只能在一个方向上流动），具有固定的读端和写端<br>
+它只能用于具有亲缘关系的进程之间的通信（也是父子进程或者兄弟进程之间）<br>
+它可以看成是一种特殊的文件，对于它的读写也可以使用普通的read、write等函数。但是它不是普通的文件，并不属于其他任何文件系统，并且只存在于内存中。</p>
+<p>1.2 命名管道FIFO</p>
+<p>FIFO可以在无关的进程之间交换数据<br>
+FIFO有路径名与之相关联，它以一种特殊设备文件形式存在于文件系统中</p>
+<p>2 系统 IPC</p>
+<p>2.1 消息队列</p>
+<p>消息队列，是消息的链接表，存放在内核中。一个消息队列由一个标识符（即队列ID）来标记。(消息队列克服了信号传递信息少，管道只能承载无格式字节流以及缓冲区大小受限等特点)具有写权限得进程可以按照一定得规则向消息队列中添加新信息；对消息队列有读权限得进程则可以从消息队列中读取信息；</p>
+<p>特点：</p>
 <ul>
-<li>业界存在的识别算法简介和对比</li>
-<li>针对普遍使用的 <a href="https://github.com/mozilla/readability">Readability</a> 进行具体介绍</li>
-<li>怎样实现一套更优的算法？</li>
+<li>消息队列是面向记录的，其中的消息具有特定的格式以及特定的优先级。</li>
+<li>消息队列独立于发送与接收进程。进程终止时，消息队列及其内容并不会被删除。</li>
+<li>消息队列可以实现消息的随机查询,消息不一定要以先进先出的次序读取,也可以按消息的类型读取。</li>
 </ul>
-<h2 id="背景">背景</h2>
-<p>​互联网上海量网页数据，分析和挖掘其中价值的第一步就是识别出真正的正文，剔除页面无关的噪音，从而更好的分析。然而面对千奇百怪的页面布局和展示，分别为每个页面制作一个页面解析模板不仅耗时耗力，当页面改版以后之前的工作都将失去意义</p>
-<h2 id="业界已有算法">业界已有算法</h2>
-<p>针对这种情况，业界为了提高效率，通过不同的算法实现了自动的正文提取。下面我们分别简单说明相关的实现</p>
-<h3 id="正文密度">正文密度</h3>
-<p><strong>介绍</strong></p>
-<p>基于正文密度的算法是遍历页面所有只包含文本节点的 dom 节点。遍历当前 dom 节点，当节点内的文本数量占比整个页面所有的文本数量大于 0.4 则认为是正文区域，否则继续遍及父级节点</p>
-<p><strong>缺点</strong></p>
-<p>基于正文密度的算法针对英文页面有很好的效果，对于中文类含有噪音较多的网页会存在识别区域大于正文区域的情况，且针对图片内容等类型网页则无能为力</p>
-<p><strong>代表</strong></p>
-<p>Chrome 扩展  <a href="https://chrome.google.com/webstore/detail/just-read/dgmanlpmmkibanfdgjocnabmcaclkmod">just-read</a> 使用该算法，通过 css 解决了 识别区域大于正文区域的情况，具体做法是通过 css 隐藏掉 footer 、header、comment、ad 等类名和标签名。虽然可以达到较高的准确率但是会存在误伤正文的情况</p>
-<h3 id="文本特征">文本特征</h3>
-<p><strong>介绍</strong></p>
-<p>基于文本特征的算法是识别页面所有的文本区域，根据正文的特征来识别正文。特征如：标签符号的数量，文本长度的峰值变化等特征来识别正文</p>
-<p><strong>缺点</strong></p>
-<p>对于图片类内容仍然是无能为力</p>
-<p><strong>代表</strong></p>
-<p>Chrome 自带的阅读模式（开启方法： 在 chrome://flags 页面搜索 read mode 启动）</p>
-<h3 id="权值计算">权值计算</h3>
-<p><strong>介绍</strong></p>
-<p>对于正文特征进行权值计算，使用特征为： 标点符号数量、正文长度、正文链接密度。通过对以上特征的加权计算，对于得分加权到父级节点，并赋予祖父节点一半的权值。最后找出权值最高的 dom 节点就是正文节点</p>
-<p><strong>缺点</strong></p>
-<p>该算法需要解析DOM树，因此执行效率稍微慢一些。因为是加权对 dom 赋值计算，针对常规 div 包裹 p 标签类型的网页可以达到 100% 识别率，但是对于不按套路出牌的网页则会存在丢失正文的情况。如:正文使用多个 div 包裹，最后使用一个 div 把这些 div 包起来，这样权值计算之后会识别其中一个 div 导致其他正文丢失</p>
-<p><strong>代表</strong></p>
-<p>Safari 的阅读模式。该算法在 safari 进行了更多的优化，识别率更高。原始代码基于大名鼎鼎的 arc90 实验室的 Readability 。该算法已经商业化实现了 firefox ，chrome 插件及 flipboard 。目前火狐浏览器使用的源代码开源了，地址 ： <a href="https://github.com/mozilla/readability">Readability</a></p>
-<h3 id="readability-深究">Readability 深究</h3>
-<p>通过一个超简化版本来深入浅出研究 Readability，你可以直接在文字多的网页控制台运行查看识别效果</p>
-<pre><code class="language-js">let maybeNode = {
-  score:0,
-};
-const nodes = document.body.getElementsByTagName('p');
-for(var i = 0, len = nodes.length; i &lt; len; i++){
-  const node = nodes[i];
-  let score = 1;
-  const text = node.innerText;
-  score += text.split(/：|。|；|，|,|\.|\?|”/).length;
-  score += Math.min(Math.floor(text.length / 100), 3);
-  typeof node.score !== 'number' &amp;&amp; (node.score = 0);
-  node.score += score;
-  node.setAttribute('score', node.score);
-  node.score &gt; maybeNode.score &amp;&amp; (maybeNode = node);
-  let index = 0;
-  let tempNode = node.parentElement;
-  while (tempNode &amp;&amp; tempNode.tagName !== 'BODY'){
-    if(/div|article|section/i.test(tempNode.tagName)){
-      typeof tempNode.score !== 'number' &amp;&amp; (tempNode.score = 0);
-      tempNode.score += score / (index &lt; 2 ? index + 2 : index * 3);
-      tempNode.setAttribute('score', tempNode.score);
-      tempNode.score &gt; maybeNode.score &amp;&amp; (maybeNode = tempNode);
-      if (++index &gt;= 3) {
-        break;
-      }
-    }
-    tempNode = tempNode.parentElement;
-  }
-}
-maybeNode &amp;&amp; (maybeNode.style.border = '1px solid red');
-</code></pre>
-<h3 id="如何实现一套更优的算法">如何实现一套更优的算法</h3>
-<p>正如上面所说，不同的算法都含有一定的缺点。我们如何实现一套更好的算法呢 ？</p>
-<p>目前只有 Readability 的表现可圈可点，因此我们基于 Readability 来做思考</p>
-<p>单页应用？图片类网页？iframe 类网页？</p>
+<p>2.2 信号量 semaphore</p>
+<p>信号量（semaphore）与已经介绍过的 IPC 结构不同，它是一个计数器，可以用来控制多个进程对共享资源的访问。信号量用于实现进程间的互斥与同步，而不是用于存储进程间通信数据。</p>
+<p>特点：</p>
+<ul>
+<li>信号量用于进程间同步，若要在进程间传递数据需要结合共享内存。</li>
+<li>信号量基于操作系统的PV操作，程序对信号量的操作都是原子操作。</li>
+<li>每次对信号量的PV操作不仅限于对信号量值加1或减1，而且可以加减任意正整数。</li>
+<li>支持信号量组。</li>
+</ul>
+<p>2.3 信号 signal</p>
+<p>信号是一种比较复杂的通信方式，用于通知接收进程某个事件已经发生。</p>
+<p>2.4 共享内存（SharedMemory）</p>
+<p>它使得多个进程可以访问同一块内存空间，不同进程可以及时看到对方进程中对共享内存中数据得更新。这种方式需要依靠某种同步操作，如互斥锁和信号量等</p>
+<p>特点：</p>
+<ul>
+<li>共享内存是最快的一种IPC，因为进程是直接对内存进行存取</li>
+<li>因为多个进程可以同时操作，所以需要进行同步</li>
+<li>信号量+共享内存通常结合在一起使用，信号量用来同步对共享内存的访问</li>
+</ul>
+<p>3 套接字 SOCKET</p>
+<p>socket也是一种进程间通信机制，与其他通信机制不同的是，它可用于不同主机之间的进程通信。</p>
+<p><strong>线程间通信的方式</strong></p>
+<ul>
+<li>临界区：通过多线程的串行化来访问公共资源或一段代码，速度快，适合控制数据访问；</li>
+<li>互斥量Synchronized/Lock：采用互斥对象机制，只有拥有互斥对象的线程才有访问公共资源的权限。因为互斥对象只有一个，所以可以保证公共资源不会被多个线程同时访问</li>
+<li>信号量 Semphare：为控制具有有限数量的用户资源而设计的，它允许多个线程在同一时刻去访问同一个资源，但一般需要限制同一时刻访问此资源的最大线程数目。</li>
+<li>事件(信号)，Wait/Notify：通过通知操作的方式来保持多线程同步，还可以方便的实现多线程优先级比较操作</li>
+</ul>
 
                 </div>
             </article>
@@ -198,8 +182,8 @@ maybeNode &amp;&amp; (maybeNode.style.border = '1px solid red');
 
         
             <div class="next-post">
-                <a href="https://ranhe.xyz/circle-install/" class="post-title gt-a-link">
-                    下一篇: 下载和安装指引 - Circle 阅读模式
+                <a href="https://ranhe.xyz/wang-ye-zheng-wen-ti-qu-suan-fa-yan-jiu-xue-xi/" class="post-title gt-a-link">
+                    下一篇: 网页正文提取算法研究学习
                 </a>
             </div>
         
