@@ -8,7 +8,7 @@ feature:
 isTop: true
 ---
 
-感谢大家的支持，本来只是上线看看效果，没想到大家如此喜欢，甚至有热心网友自觉帮我推广，接着各种平台开始出现 Circle 的身影。目前已经上架 Chrome、Firfox（审核中）、360 和 Microsoft Edge 扩展市场。[马上安装](https://ranhe.xyz/circle-install/)
+感谢大家的支持，本来只是上线看看效果，没想到大家如此喜欢，甚至有热心网友自觉帮我推广，接着各种平台开始出现 Circle 的身影。目前已经上架 Chrome、Firfox、360 和 Microsoft Edge 扩展市场。[马上安装](https://ranhe.xyz/circle-install/)
 
 ## 目前取得成绩
 
