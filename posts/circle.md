@@ -1,5 +1,5 @@
 ---
-title: '让网页赏心悦目、让阅读回归初心 - Circle 阅读模式'
+title: ' Circle 阅读模式 – 为网页适配更舒适的阅读模式，支持深色模式'
 date: 2021-02-08 21:11:32
 tags: [阅读模式,chrome,Microsoft Edge,浏览器,Circle 阅读模式]
 published: true
@@ -7,15 +7,12 @@ hideInList: false
 feature: 
 isTop: true
 ---
-感谢大家的支持，本来只是上线看看效果，没想到大家如此的喜欢，甚至于有热心网友自觉为我推广，接着各种平台开始出现 Circle 的身影。我是开发者染河，我会一直更新下去
 
-目前已经上架 Chrome、Firfox、360 和 Microsoft Edge 扩展市场，其他平台陆续上架中。[下载安装](https://ranhe.xyz/circle-install/)
+感谢大家的支持，本来只是上线看看效果，没想到大家如此喜欢，甚至有热心网友自觉帮我推广，接着各种平台开始出现 Circle 的身影。目前已经上架 Chrome、Firfox（审核中）、360 和 Microsoft Edge 扩展市场。[马上安装](https://ranhe.xyz/circle-install/)
 
 ## 目前取得成绩
 
-上线当天 Chrome 扩展市场 **360** 安装量，第二天 **1000+** 安装量
-
-上线第二天被小众软件精选
+上线当天 Chrome 扩展市场 **360** 安装量，第二天 **1000+** 安装量（目前 1w+ 用户）。上线第二天被小众软件精选
 
 ![Circle 阅读模式被小众软件精选](https://ranhe.xyz/post-images/1615272351928.jpg)
 
@@ -23,11 +20,11 @@ isTop: true
 
 ![Circle 阅读模式搜索结果](https://ranhe.xyz/post-images/1615272342628.jpg)
 
-## Circle 阅读模式介绍 – 为网页适配更舒适的阅读模式，支持深色模式
+## 关于 Circle 阅读模式
 
 广告太多分散注意力、配色太丑不忍直视、字体太小看不清、排版太乱找不到正文，阅读真的需要这么困难吗？有没有产品可以把网页中的内容提取出来重新整理，渲染成更方便阅读的排版界面呢？
 
-Circle 就是一款这样的浏览器（目前支持 Chrome， Firfox 和 Microsoft Edge 浏览器，其他平台上线中）扩展程序，如下图所示
+Circle 就是一款这样的扩展程序（目前已上架 Chrome、360、 Firfox 和 Microsoft Edge 浏览器），如下图所示
 
 ![Circle （阅读模式）智能识别效果](https://ranhe.xyz/post-images/1613019066732.png)
 
@@ -49,11 +46,7 @@ http://www.shb.cas.cn/kjjz2016/201607/t20160712_4639424.html
 
 ![Circle 阅读模式效果对比图](https://ranhe.xyz/post-images/1615281038997.jpg)
 
-上面的网址内容结构不够规范，对于大部分产品都是从中间部分开始展示，漏掉了大段的前半部分正文（  Safari 也不例外），除此之外，请大家注意识别之后的文章标题！！！！
-
- http://new.rushi.net/Home/Works/mobilework/id/50657.html
-
-上面的网址内容大多是图片，大部分产品都无法正常识别
+上面的网址内容结构不够规范，对于大部分产品都是从中间部分开始展示，漏掉了大段的前半部分正文（  Safari 也不例外），除此之外，请大家注意识别之后的**文章标题**！！！！
 
 ## 绚丽多彩的内置主题
 
@@ -94,17 +87,15 @@ LI Yi：很快很简洁，感谢开发者！非常期待黑白名单~
 
 ## 问题反馈
 
-遇到任何问题或者产品缺陷可以在 https://github.com/hewenguang/circle/issues 提 issue
+意见建议、产品缺陷和其他任何问题都可以在 https://support.qq.com/products/317910 反馈
 
-没有 github 账号的话，可以通过邮箱 wenguang.fe@gmail.com 联系我
-
-QQ 讨论组：605710052
+想要及时获取 Circle 更新信息，可以加入 QQ 讨论组：605710052
 
 ![Circle 讨论组](https://ranhe.xyz/post-images/1614838148943.jpg)
 
 ## 支持我
 
-万水千山总关情，请我喝杯咖啡 ☕️ 可还行？
+万水千山总关情，请我喝杯 ☕️ 可还行？
 
 ![捐赠 Circle](https://ranhe.xyz/post-images/donate.jpg)
 
@@ -114,8 +105,6 @@ QQ 讨论组：605710052
 
 Circle 是我在试用了很多已有的产品后，整体觉得不够友好的情况下，萌生了自己开发一款产品的想法
 
-我有正经的全职工作，所以只能下班后或者双休时间开发。目前第一个版本已经正式上线。目前功能还比较简单，后面会慢慢完善。如果你使用之后觉得有点意思，欢迎告诉同伴或者发一个微博帮助宣传下 Circle
-
-由于目前所有的开发、测试、运营、推广和文档编写都是我一个人来做的，所以功能还不够完善。如果你有时间，欢迎帮助我一起完善产品
+我有正经的全职工作，所以只能下班后或者双休时间开发。目前功能还比较简单，后面会慢慢完善。如果你使用之后觉得有点意思，欢迎告诉同伴或者在社交平台发一个使用感受帮助宣传 Circle
 
 Circle 源代码托管在 github 上，地址：https://github.com/hewenguang/circle

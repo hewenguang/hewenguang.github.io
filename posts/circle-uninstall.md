@@ -7,6 +7,8 @@ hideInList: true
 feature: 
 isTop: false
 ---
-直接在下面评论或者前往 https://github.com/hewenguang/circle 告诉我们你的意见，帮助 Circle 更好的服务其他人
+Circle 还处在起步阶段，我们还在不断地完善来满足更多的用户。很遗憾目前的 Circle 没能满足你的所有想法，但请详细我们会越来越好
 
-没有 github 账号的话，可以通过邮箱 wenguang.fe@gmail.com 联系我
+不如[反馈]( https://support.qq.com/products/317910) 给我们你的槽点，来帮助我们更好的完善 Circle。任何意见和建议都会被认真对待和回复
+
+如果你真的不喜欢 Circle 也希望你可以过段时间再来看看，感谢支持
