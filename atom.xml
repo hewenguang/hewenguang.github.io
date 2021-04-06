@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ranhe.xyz</id>
     <title>染河学长</title>
-    <updated>2021-04-05T16:04:42.928Z</updated>
+    <updated>2021-04-06T08:17:25.053Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ranhe.xyz"/>
     <link rel="self" href="https://ranhe.xyz/atom.xml"/>
@@ -11,17 +11,17 @@
     <icon>https://ranhe.xyz/favicon.ico</icon>
     <rights>All rights reserved 2021, 染河学长</rights>
     <entry>
+        <title type="html"><![CDATA[我的最后一款阅读模式浏览器插件 - Circle 阅读模式]]></title>
+        <id>https://ranhe.xyz/my-last-reader-mode-extension/</id>
+        <link href="https://ranhe.xyz/my-last-reader-mode-extension/">
+        </link>
+        <updated>2021-04-06T08:07:58.000Z</updated>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[进程和线程的区别及相互之间的通信]]></title>
         <id>https://ranhe.xyz/jin-cheng-he-xian-cheng-de-qu-bie-ji-xiang-hu-zhi-jian-de-tong-xin/</id>
         <link href="https://ranhe.xyz/jin-cheng-he-xian-cheng-de-qu-bie-ji-xiang-hu-zhi-jian-de-tong-xin/">
         </link>
         <updated>2021-03-18T10:27:19.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[网页正文提取算法研究学习]]></title>
-        <id>https://ranhe.xyz/wang-ye-zheng-wen-ti-qu-suan-fa-yan-jiu-xue-xi/</id>
-        <link href="https://ranhe.xyz/wang-ye-zheng-wen-ti-qu-suan-fa-yan-jiu-xue-xi/">
-        </link>
-        <updated>2021-03-17T06:23:03.000Z</updated>
     </entry>
 </feed>
