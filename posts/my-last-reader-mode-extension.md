@@ -109,12 +109,11 @@ Circle 的作者把他这个项目给开源到了 GitHub 上，本身 Circle 也
 
 下面贴上一些相关的链接，方便大家下载体验
 
-1，Chrome 浏览器扩展市场 https://chrome.google.com/webstore/detail/circle-reader-mode/dhpfcgilccfkodnhbllpiaabofjbjcbg
+- [Chrome 浏览器扩展市场](https://chrome.google.com/webstore/detail/circle-reader-mode/dhpfcgilccfkodnhbllpiaabofjbjcbg)
+- [Microsoft Edge 浏览器扩展市场](https://microsoftedge.microsoft.com/addons/detail/circle-%E9%98%85%E8%AF%BB%E6%A8%A1%E5%BC%8F%EF%BD%9Creader-mode/hjkjecmcifblnghjpcjaofpakjpgfjio)
+- [Firefox 浏览器扩展市场](https://addons.mozilla.org/zh-CN/firefox/addon/circle-reading-mode/)
+- [360 浏览器扩展市场](https://ext.chrome.360.cn/webstore/detail/dhpfcgilccfkodnhbllpiaabofjbjcbg)
+- [直接下载安装包](https://ranhe.xyz/post-images/circle.zip) 
+- [官网](https://ranhe.xyz/circle/)
+- [源代码](https://github.com/hewenguang/circle)
 
-2，Microsoft Edge 浏览器扩展市场 https://microsoftedge.microsoft.com/addons/detail/circle-%E9%98%85%E8%AF%BB%E6%A8%A1%E5%BC%8F%EF%BD%9Creader-mode/hjkjecmcifblnghjpcjaofpakjpgfjio
-3，Firefox 浏览器扩展市场 https://addons.mozilla.org/zh-CN/firefox/addon/circle-reading-mode/
-4，360 浏览器扩展市场 https://ext.chrome.360.cn/webstore/detail/dhpfcgilccfkodnhbllpiaabofjbjcbg
-5，直接下载安装包 https://ranhe.xyz/post-images/circle.zip
-
-官网 https://ranhe.xyz/circle/
-源代码 https://github.com/hewenguang/circle
