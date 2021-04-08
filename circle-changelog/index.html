@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>常见问题 - Circle 阅读模式 | 染河学长</title>
+<title>版本变更记录 - Circle 阅读模式 | 染河学长</title>
 
 <link rel="shortcut icon" href="https://ranhe.xyz/favicon.ico?v=1617899080194">
 <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -88,12 +88,24 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    常见问题 - Circle 阅读模式
+                    版本变更记录 - Circle 阅读模式
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2021-03-11 ·
+                        · 2021-04-09 ·
                     </time>
+                    
+                        <a href="https://ranhe.xyz/liu-lan-qi-kuo-zhan/" class="post-tags">
+                            # 浏览器扩展
+                        </a>
+                    
+                        <a href="https://ranhe.xyz/liu-lan-qi-cha-jian/" class="post-tags">
+                            # 浏览器插件
+                        </a>
+                    
+                        <a href="https://ranhe.xyz/circle-yue-du-mo-shi/" class="post-tags">
+                            # Circle 阅读模式
+                        </a>
                     
                 </div>
                 <div class="circle-share"></div>
@@ -104,10 +116,79 @@
 </script>
 
                 <div class="post-content">
-                    <p>问：有规划添加打印功能吗？</p>
-<p>答：请使用浏览器自带的打印功能，Circle 已经适配浏览器自带的打印功能</p>
-<p>问：可以导出为 pdf 吗？</p>
-<p>答：可以使用浏览器自身的打印功能，”格式“选择 pdf 即可</p>
+                    <h2 id="circle-v120-即将上线">Circle v1.2.0 （即将上线）</h2>
+<ul>
+<li>算法更新，优化部分页面识别非正文情况（排除隐藏大段正文的情况）</li>
+<li>打印页面优化（删除工具条和反馈按钮）</li>
+<li>加入主图识别算法，可以识别大部分页面主图</li>
+<li>优化渲染引擎，对部分网站图片展示失败作处理</li>
+<li>修复自定义字体无法输入中文的bug</li>
+</ul>
+<h2 id="circle-v111当前版本">Circle v1.1.1（当前版本）</h2>
+<ul>
+<li>修复自动加载下一页失效</li>
+</ul>
+<h2 id="circle-v110">Circle v1.1.0</h2>
+<ul>
+<li>加入反馈渠道和使用方式入口</li>
+<li>修复更新默认快捷键设置失败</li>
+</ul>
+<h2 id="circle-v103">Circle v1.0.3</h2>
+<p>全新的解析引擎，从 9kb 缩小到 5kb 的极致轻量，解析能力做到更强大更智能，覆盖更多文章页面</p>
+<h3 id="新特性">新特性</h3>
+<ul>
+<li>返回顶部（设置页面开启）</li>
+<li>文章目录（设置页面开启）</li>
+<li>一键隐藏文章图片</li>
+<li>设置图片对齐方式</li>
+</ul>
+<h3 id="页面右侧工具栏">页面右侧工具栏</h3>
+<ul>
+<li>“调整页面” 按钮和 “退出” 按钮替换顺序，为了方便退出 Circle</li>
+</ul>
+<h3 id="快捷键相关">快捷键相关</h3>
+<ul>
+<li>自定义快捷键</li>
+<li>解决输入或者复制等操作的冲突</li>
+<li>双击触发修改为单击触发，支持单键（如：C）、组合键（如：Ctrl + C）和多组合键（如： Ctrl + Shift + C）</li>
+</ul>
+<h3 id="加入右键菜单">加入右键菜单</h3>
+<ul>
+<li>右键进入设置页面</li>
+<li>右键加入白名单</li>
+<li>右键进入聚焦模式</li>
+</ul>
+<h3 id="bug-修复">bug 修复</h3>
+<ul>
+<li>Edge 平台验证码冲突</li>
+<li>图片等资源的重复加载</li>
+</ul>
+<h2 id="circle-v101">Circle v1.0.1</h2>
+<h3 id="新特性-2">新特性</h3>
+<ul>
+<li>加入 “白名单”支持特定网站自动解析</li>
+<li>加入“自定义字体”支持手动控制网页字体</li>
+<li>加入“重置排版设置” 恢复默认设置</li>
+<li>加入“简化版聚焦模式”支持手动框选识别失败的正文（右键点击“聚焦模式”或者双击 ff 进入）</li>
+<li>加入 “禁用自动解析下一页” 来开启/禁用自动解析</li>
+<li>加入快捷键支持（双击按键  c 开启/关闭 Circle ，单击 esc 退出 Circle）</li>
+<li>在“文章页面自动开启”选项启用情况下加入“排除规则” 针对文章页面自动开启时排除部分网站</li>
+<li>加入“帮助中心”页面</li>
+</ul>
+<h3 id="变动功能">变动功能</h3>
+<ul>
+<li>分享迁移至帮助中心</li>
+</ul>
+<h3 id="下线功能">下线功能</h3>
+<ul>
+<li>下线”检查更新“模块</li>
+</ul>
+<h3 id="bug-修复-2">bug 修复</h3>
+<ul>
+<li>无法在阅读模式中使用 element.scrollIntoView() 或者 window.scrollTo({top: 1000}) #12 https://github.com/hewenguang/circle/issues/12</li>
+<li>打印设置优化 #3  https://github.com/hewenguang/circle/issues/3</li>
+<li>点击空格滚动失败</li>
+</ul>
 
                 </div>
             </article>
@@ -115,8 +196,8 @@
 
         <!-- 
             <div class="next-post">
-                <a href="https://ranhe.xyz/circle-usage/" class="post-title gt-a-link">
-                    下一篇: Circle 阅读模式使用指引
+                <a href="https://ranhe.xyz/lian-chu-nu-zuo-du-shuo-hao-de-liu-lan-qi-kuo-zhan-circle-yue-du-mo-shi/" class="post-title gt-a-link">
+                    下一篇: 连处女座都说好的浏览器扩展 - Circle 阅读模式
                 </a>
             </div>
          -->
