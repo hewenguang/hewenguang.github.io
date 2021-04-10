@@ -17,11 +17,9 @@ isTop: false
 
 ![Circle 阅读模式如何打印知乎文章](https://ranhe.xyz/post-images/1618068826994.png)
 
-
 直接右键打印效果如下：
 
 ![Circle 阅读模式如何打印知乎文章](https://ranhe.xyz/post-images/1618068835801.png)
-
 
 安装启用 Circle 之后如下：
 

@@ -8,11 +8,11 @@ feature:
 isTop: true
 ---
 
-感谢大家的支持，本来只是上线看看效果，没想到大家如此喜欢，甚至有热心网友自觉帮我推广，接着各种平台开始出现 Circle 的身影。目前已经上架 Chrome、Firfox、360 和 Microsoft Edge 扩展市场。[马上安装](https://ranhe.xyz/circle-install/)
+感谢大家的支持，本来只是上线看看效果，没想到大家如此喜欢，甚至有热心网友自觉帮我推广，接着各种平台开始出现 Circle 的身影。目前已经上架 Chrome、Firfox、Microsoft Edge 和 360（ 其中 360 审核太慢，只有最老的版本） 扩展市场。[马上安装](https://ranhe.xyz/circle-install/)
 
 ## 目前取得成绩
 
-上线当天 Chrome 扩展市场 **360** 安装量，第二天 **1000+** 安装量（目前 1w+ 用户）。上线第二天被小众软件精选
+上线当天 Chrome 扩展市场 **360** 安装量，第二天 **1000+** 安装量（目前 2w+ 用户）。上线第二天被小众软件精选
 
 ![Circle 阅读模式被小众软件精选](https://ranhe.xyz/post-images/1615272351928.jpg)
 
@@ -65,6 +65,26 @@ http://www.shb.cas.cn/kjjz2016/201607/t20160712_4639424.html
 页面字体，字体大小，行高，段落间距，页面宽度等等，统统允许你自己设置。如下图所示：
 
 ![Circle（阅读模式） 灵活配置选项](https://ranhe.xyz/post-images/1613263480613.png)
+
+## 更干净的文章打印
+
+借助于 Circle 阅读模式你可以直接打印文章。以 “如何看待市场监管总局对阿里巴巴垄断行为作出 182.28 亿行政处罚？会带来哪些影响？”为例展示如何使用 Circle 阅读模式打印知乎文章
+
+原网页如下：
+
+![Circle 阅读模式如何打印知乎文章](https://ranhe.xyz/post-images/1618068826994.png)
+
+直接右键打印效果如下：
+
+![Circle 阅读模式如何打印知乎文章](https://ranhe.xyz/post-images/1618068835801.png)
+
+安装启用 Circle 之后如下：
+
+![Circle 阅读模式解析知乎文章](https://ranhe.xyz/post-images/1618068847977.png)
+
+右键打印如下：
+
+![Circle 阅读模式打印知乎文章](https://ranhe.xyz/post-images/1618068855510.png)
 
 ## 部分真实用户评价
 
