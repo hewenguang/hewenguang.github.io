@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ranhe.xyz</id>
     <title>染河学长</title>
-    <updated>2021-04-08T16:28:36.669Z</updated>
+    <updated>2021-04-10T15:37:47.203Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ranhe.xyz"/>
     <link rel="self" href="https://ranhe.xyz/atom.xml"/>
@@ -11,17 +11,17 @@
     <icon>https://ranhe.xyz/favicon.ico</icon>
     <rights>All rights reserved 2021, 染河学长</rights>
     <entry>
+        <title type="html"><![CDATA[怎么样可以把网页文章干净地打印下来？]]></title>
+        <id>https://ranhe.xyz/how-to-print-article/</id>
+        <link href="https://ranhe.xyz/how-to-print-article/">
+        </link>
+        <updated>2021-04-10T15:22:25.000Z</updated>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[版本变更记录 - Circle 阅读模式]]></title>
         <id>https://ranhe.xyz/circle-changelog/</id>
         <link href="https://ranhe.xyz/circle-changelog/">
         </link>
         <updated>2021-04-08T16:18:23.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[连处女座都说好的浏览器扩展 - Circle 阅读模式]]></title>
-        <id>https://ranhe.xyz/lian-chu-nu-zuo-du-shuo-hao-de-liu-lan-qi-kuo-zhan-circle-yue-du-mo-shi/</id>
-        <link href="https://ranhe.xyz/lian-chu-nu-zuo-du-shuo-hao-de-liu-lan-qi-kuo-zhan-circle-yue-du-mo-shi/">
-        </link>
-        <updated>2021-04-06T14:37:27.000Z</updated>
     </entry>
 </feed>
