@@ -7,7 +7,13 @@ hideInList: false
 feature: 
 isTop: false
 ---
-## Circle v1.2.0（当前最新版本）
+## Circle v1.2.1（最新版本）
+
+- 修复自动解析下一页算法优化导致的老网站失效问题
+- 修复调整面板在小屏幕下无法正常展示的问题
+- 大纲加入自动隐藏功能，方便小屏幕阅读
+
+## Circle v1.2.0
 
 - 正文识别算法优化，支持类似“观察者”网的结构的所有网站
 - 标题识别算法优化，支持类似网页标题和文章标题完全不相关的情况，如：https://page.om.qq.com/page/OLK3MWsrtVhiV3fPVfxqSGDQ0
