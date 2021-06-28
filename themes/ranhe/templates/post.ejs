@@ -7,6 +7,9 @@
     <%- include('./includes/header') %>
     <div class="post-container">
         <div class="post-detail gt-bg-theme-color-second">
+            <% if (post.feature) { %>
+            <div><img src="<%= post.feature %>" alt="<%= post.title %>"></div>
+            <% } %>
             <article class="gt-post-content">
                 <h2 class="post-title">
                     <%= post.title %>

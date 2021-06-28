@@ -4,10 +4,9 @@ date: 2020-12-31 12:58:21
 tags: []
 published: true
 hideInList: false
-feature: 
+feature: /post-images/my-career.jpg
 isTop: false
 ---
-
 时间飞逝，举目已是深秋
 
 ## 毕业
