@@ -353,6 +353,10 @@ ul li {
   list-style: disc;
   font-size: 16px;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
 .main {
   max-width: 100%;
   min-height: 100vh;
@@ -473,12 +477,6 @@ ul li {
 .gt-fc {
   display: flex;
   flex-direction: column;
-}
-.gt-post-content .circle-share {
-  text-align: center;
-}
-.gt-post-content .circle-share p {
-  font-size: 12px;
 }
 .navbar {
   padding: 38px 96px !important;
