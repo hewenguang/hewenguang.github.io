@@ -26,39 +26,20 @@
       padding: 10px 20px;
       border-bottom: 1px solid #d9dce0;
     }
-    .circle-share{
-      text-align: center;
-      display: block;
-      padding: 10px 20px;
-      border-bottom: 1px solid #d9dce0;
-    }
-    .circle-donate{
-      text-align: center;
+    .circle-about .circle-warn{
+      color: #f73030;
     }
   </style>
 </head>
 <body>
   <div class="circle-about">
+    <a target="_blank" class="circle-warn circle-block" href="https://ranhe.xyz/circle">全新设计、全新交互的 Circle v2.0.0 正式版上线啦</a>
     <a target="_blank" class="circle-block" href="https://support.qq.com/products/317910">问题反馈</a>
     <a target="_blank" class="circle-block" href="https://ranhe.xyz/circle-usage/">使用指南</a>
     <a target="_blank" class="circle-block" href="https://github.com/hewenguang/circle">github 上查看源代码</a>
     <a target="_blank" class="circle-block" href="https://jq.qq.com/?_wv=1027&k=VVzeMjMK">QQ 讨论组：605710052</a>
     <a target="_blank" class="circle-block" href="mailto:wenguang.fe@gmail.com">其他事项联系邮箱：wenguang.fe@gmail.com</a>
-    <div class="circle-share"></div>
-    <p class="circle-donate">如果 Circle 确实帮助到了你，不如请我喝一杯 ☕️ 以示鼓励和支持 😄 </p>
-    <p class="circle-donate"><img src="https://ranhe.xyz/post-images/donate.jpg" /></p>
   </div>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
-  <script type="text/javascript">
-    socialShare('.circle-share', {
-      url: 'https://ranhe.xyz/circle',
-      title: '让网页赏心悦目、让阅读回归初心 - Circle 还你最纯粹的阅读体验，为你更好的阅读保驾护航',
-      image: 'https://ranhe.xyz/post-images/1613019066732.png',
-      description: '广告太多分散注意力、配色太丑不忍直视、字体太小看不清、排版太乱找不到正文，阅读真的需要这么困难吗？Circle 还你最纯粹的阅读体验，为你更好的阅读保驾护航',
-      sites: ['wechat', 'qq', 'qzone', 'weibo', 'douban', 'linkedin', 'facebook', 'twitter', 'google'],
-    });
-  </script>
   <% if (site.customConfig.ga) { %>
     <script async src="https://www.googletagmanager.com/gtag/js?id=<%= site.customConfig.ga %>"></script>
     <script>
