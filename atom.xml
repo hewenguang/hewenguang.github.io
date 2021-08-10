@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ranhe.xyz</id>
     <title>染河学长</title>
-    <updated>2021-08-06T22:06:52.744Z</updated>
+    <updated>2021-08-10T01:46:41.367Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ranhe.xyz"/>
     <link rel="self" href="https://ranhe.xyz/atom.xml"/>
@@ -11,17 +11,17 @@
     <icon>https://ranhe.xyz/favicon.ico</icon>
     <rights>All rights reserved 2021, 染河学长</rights>
     <entry>
+        <title type="html"><![CDATA[v2.1.0 版本（最新版本）]]></title>
+        <id>https://ranhe.xyz/releasev210/</id>
+        <link href="https://ranhe.xyz/releasev210/">
+        </link>
+        <updated>2021-08-10T01:35:48.000Z</updated>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[使用JavaScript检测打印请求]]></title>
         <id>https://ranhe.xyz/detecting-print-requests-with-javascript/</id>
         <link href="https://ranhe.xyz/detecting-print-requests-with-javascript/">
         </link>
         <updated>2021-04-17T06:04:43.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[怎么样可以把网页文章干净地打印下来？]]></title>
-        <id>https://ranhe.xyz/how-to-print-article/</id>
-        <link href="https://ranhe.xyz/how-to-print-article/">
-        </link>
-        <updated>2021-04-10T15:22:25.000Z</updated>
     </entry>
 </feed>
