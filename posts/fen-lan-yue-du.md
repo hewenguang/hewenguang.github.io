@@ -9,7 +9,7 @@ isTop: false
 ---
 分栏阅读给你杂志一般的阅读体验，大屏幕用户的福利。借助于 Circle 的分栏阅读功能，你可以在大屏幕上多栏阅读网页。小屏幕下由于图片的存在（尤其是长图），导致排版效果不佳，所以推荐大屏幕用户开启，看小说、听小说必备
 
-![Circle 阅读助手 v2.1.0 加入分栏阅读](https://ranhe.xyz/post-images/v210-ban-ben-zui-xin-ban-ben.png)
+![Circle 阅读助手 v2.1.0 加入分栏阅读](https://ranhe.xyz/post-images/releasev210.png)
 
 ## 如何开启 Circle 阅读助手的分栏阅读？
 

@@ -26,7 +26,7 @@ isTop: false
 
 大屏幕用户的福利，使用分栏阅读你可以单屏幕阅读更多的信息，不浪费屏幕的每一寸空间。
 
-![Circle 阅读助手 v2.1.0 加入分栏阅读](https://ranhe.xyz/post-images/v210-ban-ben-zui-xin-ban-ben.png)
+![Circle 阅读助手 v2.1.0 加入分栏阅读](https://ranhe.xyz/post-images/releasev210.png)
 
 大声朗读
 ----
