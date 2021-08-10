@@ -9,13 +9,13 @@
   <link rel="stylesheet" href="<%= themeConfig.domain %>/styles/main.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
   <% if (site.customConfig.ga) { %>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= site.customConfig.ga %>"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '<%= site.customConfig.ga %>');
-    </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<%= site.customConfig.ga %>"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '<%= site.customConfig.ga %>');
+  </script>
   <% } %>
   <style type="text/css">
     .download{margin: 0 auto 40px;display:flex;flex-wrap:wrap;justify-content:center;}.download a{position:relative;margin:12px;display:block;min-width:280px;border-radius:3px;border:1px solid #e8e8e8;padding:20px 40px 20px 100px}.download a:hover{box-shadow:0 3px 10px rgba(0,0,0,.1)}.download a p{text-align:left}.download a p{color:var(--color);margin:0}.download a p.platform{color:var(--link);line-height:1em}.icon{position:absolute;left:20px;top:15px;width:60px;height:60px;margin:0;background-size:100%;background-position:0 0;background-repeat:no-repeat;background-image:url("https://ranhe.xyz/post-images/app-icons.png")}
