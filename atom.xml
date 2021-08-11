@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ranhe.xyz</id>
     <title>染河学长</title>
-    <updated>2021-08-11T00:07:07.182Z</updated>
+    <updated>2021-08-11T16:46:44.744Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ranhe.xyz"/>
     <link rel="self" href="https://ranhe.xyz/atom.xml"/>
@@ -23,5 +23,131 @@
         <link href="https://ranhe.xyz/circle-module/">
         </link>
         <updated>2021-08-10T06:14:25.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Circle 阅读助手使用指南]]></title>
+        <id>https://ranhe.xyz/circle-learn/</id>
+        <link href="https://ranhe.xyz/circle-learn/">
+        </link>
+        <updated>2021-08-10T05:52:59.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[自动滚动]]></title>
+        <id>https://ranhe.xyz/scrollpage/</id>
+        <link href="https://ranhe.xyz/scrollpage/">
+        </link>
+        <updated>2021-08-10T02:47:29.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[大声朗读]]></title>
+        <id>https://ranhe.xyz/speak/</id>
+        <link href="https://ranhe.xyz/speak/">
+        </link>
+        <updated>2021-08-10T02:46:29.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[页内查找]]></title>
+        <id>https://ranhe.xyz/search/</id>
+        <link href="https://ranhe.xyz/search/">
+        </link>
+        <updated>2021-08-10T02:45:43.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[现场编辑]]></title>
+        <id>https://ranhe.xyz/edit/</id>
+        <link href="https://ranhe.xyz/edit/">
+        </link>
+        <updated>2021-08-10T02:44:47.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[移除内容块]]></title>
+        <id>https://ranhe.xyz/remove/</id>
+        <link href="https://ranhe.xyz/remove/">
+        </link>
+        <updated>2021-08-10T02:43:46.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[一键复制]]></title>
+        <id>https://ranhe.xyz/copy/</id>
+        <link href="https://ranhe.xyz/copy/">
+        </link>
+        <updated>2021-08-10T02:42:55.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[导出为 word]]></title>
+        <id>https://ranhe.xyz/word/</id>
+        <link href="https://ranhe.xyz/word/">
+        </link>
+        <updated>2021-08-10T02:42:25.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[导出为图片]]></title>
+        <id>https://ranhe.xyz/image/</id>
+        <link href="https://ranhe.xyz/image/">
+        </link>
+        <updated>2021-08-10T02:41:35.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[导出为纯文本]]></title>
+        <id>https://ranhe.xyz/text/</id>
+        <link href="https://ranhe.xyz/text/">
+        </link>
+        <updated>2021-08-10T02:40:54.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[导出为 markdown]]></title>
+        <id>https://ranhe.xyz/marked/</id>
+        <link href="https://ranhe.xyz/marked/">
+        </link>
+        <updated>2021-08-10T02:40:16.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[发送到邮件]]></title>
+        <id>https://ranhe.xyz/mail/</id>
+        <link href="https://ranhe.xyz/mail/">
+        </link>
+        <updated>2021-08-10T02:37:18.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[手动选择]]></title>
+        <id>https://ranhe.xyz/focus/</id>
+        <link href="https://ranhe.xyz/focus/">
+        </link>
+        <updated>2021-08-10T02:33:52.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[多页解析]]></title>
+        <id>https://ranhe.xyz/nextpage/</id>
+        <link href="https://ranhe.xyz/nextpage/">
+        </link>
+        <updated>2021-08-10T02:32:19.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[文章目录]]></title>
+        <id>https://ranhe.xyz/outline/</id>
+        <link href="https://ranhe.xyz/outline/">
+        </link>
+        <updated>2021-08-10T02:30:56.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[信纸效果]]></title>
+        <id>https://ranhe.xyz/paper/</id>
+        <link href="https://ranhe.xyz/paper/">
+        </link>
+        <updated>2021-08-10T02:29:34.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Circle 如何使用系统字体]]></title>
+        <id>https://ranhe.xyz/custom-font/</id>
+        <link href="https://ranhe.xyz/custom-font/">
+        </link>
+        <updated>2021-08-10T02:16:41.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[分栏阅读]]></title>
+        <id>https://ranhe.xyz/fen-lan-yue-du/</id>
+        <link href="https://ranhe.xyz/fen-lan-yue-du/">
+        </link>
+        <updated>2021-08-10T02:12:10.000Z</updated>
     </entry>
 </feed>
