@@ -7,7 +7,11 @@ hideInList: false
 feature: 
 isTop: false
 ---
-下面这些问题是用户遇到的，或许你也刚好遇到。如果找不到满意的答案，你可以[点击这里](https://support.qq.com/products/317910)提交你的反馈
+下面这些问题是用户遇到的，或许你也刚好遇到。
+
+**找不到满意的答案? 你可以[点击这里](https://support.qq.com/products/317910)提交你的反馈**
+
+![提交反馈](https://ranhe.xyz/post-images/1629001210256.png)
 
 问：可以导出为 pdf 吗？
 
