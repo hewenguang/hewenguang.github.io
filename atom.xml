@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ranhe.xyz</id>
     <title>染河学长</title>
-    <updated>2021-08-11T17:05:39.831Z</updated>
+    <updated>2021-08-14T17:19:23.395Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ranhe.xyz"/>
     <link rel="self" href="https://ranhe.xyz/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://ranhe.xyz/images/avatar.png</logo>
     <icon>https://ranhe.xyz/favicon.ico</icon>
     <rights>All rights reserved 2021, 染河学长</rights>
+    <entry>
+        <title type="html"><![CDATA[用户协议]]></title>
+        <id>https://ranhe.xyz/agreement/</id>
+        <link href="https://ranhe.xyz/agreement/">
+        </link>
+        <updated>2021-08-14T14:42:38.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Circle 使用权限说明]]></title>
         <id>https://ranhe.xyz/authority/</id>
@@ -142,12 +149,5 @@
         <link href="https://ranhe.xyz/custom-font/">
         </link>
         <updated>2021-08-10T02:16:41.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[分栏阅读]]></title>
-        <id>https://ranhe.xyz/fen-lan-yue-du/</id>
-        <link href="https://ranhe.xyz/fen-lan-yue-du/">
-        </link>
-        <updated>2021-08-10T02:12:10.000Z</updated>
     </entry>
 </feed>
