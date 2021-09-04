@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ranhe.xyz</id>
     <title>染河学长</title>
-    <updated>2021-09-04T09:15:12.307Z</updated>
+    <updated>2021-09-04T09:17:09.651Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ranhe.xyz"/>
     <link rel="self" href="https://ranhe.xyz/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://ranhe.xyz/favicon.ico</icon>
     <rights>All rights reserved 2021, 染河学长</rights>
     <entry>
-        <title type="html"><![CDATA[截丫 - 一键全页截图神器]]></title>
+        <title type="html"><![CDATA[截丫 - 一键全页截图神器 v1.0.0 发布啦]]></title>
         <id>https://ranhe.xyz/ishot-update/</id>
         <link href="https://ranhe.xyz/ishot-update/">
         </link>
