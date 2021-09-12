@@ -7,7 +7,10 @@ hideInList: false
 feature: 
 isTop: false
 ---
-## Circle v2.1.0（最新版本）
+Circle 拥有自己的官网啦，后面所有相关更新都会迁移到新网站，该文件不在更新，详情访问：[Circle 阅读助手](http://circlereader.com/)
+
+
+## Circle v2.1.0
 
 **简约、优雅、轻量**，Circle v2.1.0 版本满足每一个人的阅读需求。可以是一个简单的阅读辅助软件，也可以是一个看小说神器、亦可以是一个资料整理助手。[查看更多](https://ranhe.xyz/releasev210)
 

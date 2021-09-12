@@ -7,6 +7,8 @@ hideInList: false
 feature: 
 isTop: false
 ---
+**Circle 拥有自己的官网啦，后面所有相关更新都会迁移到新网站，详情访问：[Circle 阅读助手](http://circlereader.com/)**
+
 Circle 是一款免费好用的浏览器扩展程序，可以把网页中的中文内容提取出来，重新排版整理成更方便阅读的排版界面。还没有安装 Circle？[免费获取](https://ranhe.xyz/circle-install/)
 
 新版本 Circle v2.1.0 上线了自定义工具栏，接下来我们来一起学习如何使用
