@@ -1,0 +1,53 @@
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="description" content=""/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Circle reading mode</title>
+  <style type="text/css">
+    body{
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      color: #5f6367;
+      line-height: 1.75;
+      background: #fff;
+      font-family: "Lucida Grande", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    }
+    .circle-about a{
+      color: #5f6367;
+      text-decoration: none;
+    }
+    .circle-about a:hover{
+      color:#4974d4;
+    }
+    .circle-block{
+      display: block;
+      padding: 10px 20px;
+      border-bottom: 1px solid #d9dce0;
+    }
+    .circle-about .circle-warn{
+      color: #f73030;
+    }
+  </style>
+</head>
+<body>
+  <div class="circle-about">
+    <a target="_blank" class="circle-warn circle-block" href="http://circlereader.com/node/59">Circle v2.2.0 with new design and new interaction is on line</a>
+    <a target="_blank" class="circle-block" href="https://support.qq.com/products/317910">Question feedback</a>
+    <a target="_blank" class="circle-block" href="https://ranhe.xyz/circle-usage/">Guide to use</a>
+    <a target="_blank" class="circle-block" href="https://github.com/hewenguang/circle">View the source code on GitHub</a>
+    <a target="_blank" class="circle-block" href="https://jq.qq.com/?_wv=1027&k=VVzeMjMK">QQ discussion group: 605710052</a>
+    <a target="_blank" class="circle-block" href="mailto:wenguang.fe@gmail.com">For other matters, please contact email: wenguang.fe @ gmail.com</a>
+  </div>
+  <% if (site.customConfig.ga) { %>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= site.customConfig.ga %>"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '<%= site.customConfig.ga %>');
+    </script>
+  <% } %>
+</body>
+</html>

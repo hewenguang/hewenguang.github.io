@@ -1,0 +1,1 @@
+(()=>{var e=app._cache.render.root,n=app._cache.render.toolbar;e.addEventListener("fullscreenchange",(function(){document.fullscreenElement?dom.setStyle(n,"display","none"):dom.setStyle(n,"display","block")})),app.addAction("fullscreen",(function(){e.requestFullscreen()}))})();

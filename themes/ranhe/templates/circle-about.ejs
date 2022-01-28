@@ -1,0 +1,53 @@
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="description" content=""/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Circle 阅读模式</title>
+  <style type="text/css">
+    body{
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      color: #5f6367;
+      line-height: 1.75;
+      background: #fff;
+      font-family: "Lucida Grande", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    }
+    .circle-about a{
+      color: #5f6367;
+      text-decoration: none;
+    }
+    .circle-about a:hover{
+      color:#4974d4;
+    }
+    .circle-block{
+      display: block;
+      padding: 10px 20px;
+      border-bottom: 1px solid #d9dce0;
+    }
+    .circle-about .circle-warn{
+      color: #f73030;
+    }
+  </style>
+</head>
+<body>
+  <div class="circle-about">
+    <a target="_blank" class="circle-warn circle-block" href="http://circlereader.com/node/59">增强的快捷键和全新的帮助中心上线啦 - v2.2.0</a>
+    <a target="_blank" class="circle-block" href="https://support.qq.com/products/317910">问题反馈</a>
+    <a target="_blank" class="circle-block" href="https://ranhe.xyz/circle-usage/">使用指南</a>
+    <a target="_blank" class="circle-block" href="https://github.com/hewenguang/circle">github 上查看源代码</a>
+    <a target="_blank" class="circle-block" href="https://jq.qq.com/?_wv=1027&k=VVzeMjMK">QQ 讨论组：605710052</a>
+    <a target="_blank" class="circle-block" href="mailto:wenguang.fe@gmail.com">其他事项联系邮箱：wenguang.fe@gmail.com</a>
+  </div>
+  <% if (site.customConfig.ga) { %>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= site.customConfig.ga %>"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '<%= site.customConfig.ga %>');
+    </script>
+  <% } %>
+</body>
+</html>
