@@ -1,5 +1,5 @@
 ---
-title: 'v2.1.0 版本（最新版本）'
+title: 'v2.1.0 版本'
 date: 2021-08-10 09:35:48
 tags: []
 published: true
