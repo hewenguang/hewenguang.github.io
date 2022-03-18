@@ -1,0 +1,59 @@
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="description" content=""/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>分享 Circle 阅读助手给小伙伴～</title>
+  <style type="text/css">
+    body{
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      color: #5f6367;
+      line-height: 1.75;
+      background: #fff;
+      font-family: "Lucida Grande", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    }
+    .wrapper{
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .wrapper h3{
+      text-align: center;
+      color: #333;
+      font-size: 20px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css" integrity="sha512-ygEyjMC6rqnzJqWGjRTJUPYMEs9JUOm3i7OWUS9CgQ4XkBUvMsgCS1I8JqavidQ2ClHcREB7IbA2mN08+r9Elg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="wrapper">
+    <h3>分享 Circle 阅读助手给小伙伴～</h3>
+    <div class="share"></div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js" integrity="sha512-9DNXrSjk17bU9MUbRp3IjwcWe46V8FaGA062PFbryPUAEQVRbz4jiZP6FW0AdbqEGtMYBDWnul3eiGBMJOQajA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    socialShare('.share', {
+      url                 : 'https://ranhe.xyz/circle/',
+      source              : 'ranhe.xyz',
+      title               : '让网页赏心悦目、让阅读回归初心 - 浏览器扩展 Circle 阅读助手提供舒适的阅读体验',
+      description         : '最强大最好用的阅读模式',
+      image               : 'https://ranhe.xyz/post-images/parser.png',
+      wechatQrcodeTitle   : '微信扫一扫：分享',
+      wechatQrcodeHelper  : '<p>微信里点“发现”，扫一下</p><p>二维码便可将本文分享至朋友圈。</p>'
+    });
+  </script>
+  <% if (site.customConfig.ga) { %>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= site.customConfig.ga %>"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '<%= site.customConfig.ga %>');
+    </script>
+  <% } %>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5908416007129457" crossorigin="anonymous"></script>
+</body>
+</html>
