@@ -18,7 +18,12 @@
       </script>
   <% } %>
   <style type="text/css">
-  .post-title{text-align: center;margin-bottom: 30px;font-size: 30px;}.buy{font-size:18px}.buy h2{font-size:20px;margin-bottom:6px}.list{display:flex;flex-wrap:wrap;padding:0 !important;margin:0;justify-content:space-between}.list li{padding:5px 0;border-radius:5px;border:2px solid #666;text-align:center;width:24%;margin-bottom:16px;cursor:pointer;position:relative;overflow:hidden}.list li p:first-child{font-size:22px}.list li.active:before{content:'✓';position:absolute;right:-11px;top:-1px;font-size:12px;background-color:#666;color:#fff;padding:0 14px 7px 9px;border-bottom-left-radius:26px}.list li .hot{position:absolute;left:0;top:8px;padding:0 3px;font-size:12px;background-color:#74a96e;color:#fff;pointer-events:none}.list li.recommend{border-color:#74a96e}.list li.recommend.active:before{background-color:#74a96e}.list li p{pointer-events:none}.list li .cycle{font-size:22px;pointer-events:none}.list li span{font-size:15px;pointer-events:none}.list li i{opacity:.4;pointer-events:none;margin-right:3px;font-size:15px;text-decoration:line-through}.icon{width:24px;height:24px;top:5px;pointer-events:none;left:-6px;position:relative;display:inline-block;background-position:0 0;background-repeat:no-repeat;background-image:url("https://ranhe.xyz/post-images/pay.png")}.list li.alipay{color:#267af6;border-color:#267af6}.list li.alipay.active:before{background-color:#267af6}.alipay .icon{background-position-x:-189px}.list li.weichat{color:#1da838;border-color:#1da838!important}.list li.weichat.active:before{background-color:#1da838}.weichat .icon{background-position-x:-152px}.list li.paypal{border-color:#2b366b!important}.list li.paypal.active:before{background-color:#2b366b}.paypal .icon{background-position-x:0;width:100px}.list li.zs{color:#b0140d;border-color:#b0140d!important}.list li.zs.active:before{background-color:#b0140d}.zs .icon{background-position-x:-115px}.email{color:red}.pay-wrapper{min-height:240px;position:relative;padding-right:274px}.icon-method{position:absolute;right:92px;top:-50px;width:169px;height:230px;margin:16px 0;border-radius:3px;box-shadow:0 2px 10px #ccc;background-position:0 -2px;background-size:521px;background-repeat:no-repeat;background-image:url("https://ranhe.xyz/post-images/donate.jpg")}.icon-alipay{background-position-x:-175px}.icon-weichat{background-position-x:-2px}.icon-zs{background-position-x:-351px}.pay-warn{position:absolute;right:0;top:-20px;}
+    .migrate{
+      font-size: 20px;
+      display: block;
+      text-align: center;
+      margin-top: 20%;
+    }
   </style>
 </head>
 <body>
@@ -28,64 +33,12 @@
     <div class="post-container">
       <div class="post-detail gt-bg-theme-color-second">
         <article class="gt-post-content">
-            <h2 class="post-title">升级为高级账户来支持我</h2>
-            <div class="post-content">
-              <div class="buy">
-                <h2>选择套餐</h2>
-                <ul class="list">
-                  <li data-price="3">
-                    <p>单月</p>
-                    <span>折合 ¥3/月</span>
-                    <p class="cycle"><i>¥6元</i>¥3元</p>
-                  </li>
-                  <li data-price="12">
-                    <p>半年</p>
-                    <span>折合 ¥2/月</span>
-                    <p class="cycle"><i>¥24元</i>¥12元</p>
-                  </li>
-                  <li data-price="18">
-                    <p>年付</p>
-                    <span>折合 ¥1.5/月</span>
-                    <p class="cycle"><i>¥36元</i>¥18元</p>
-                  </li>
-                  <li data-price="49.9" class="recommend active">
-                    <span class="hot">推荐</span>
-                    <p>终身</p>
-                    <span>终身使用</span>
-                    <p class="cycle"><i>¥99元</i>¥49.9元</p>
-                  </li>
-                </ul>
-                <h2>选择支付方式</h2>
-                <ul class="list">
-                  <li data-selector="alipay-method" class="alipay active"><span class="icon"></span>支付宝</li>
-                  <li data-selector="weichat-method" class="weichat"><span class="icon"></span>微信</li>
-                  <li data-selector="zs-method" class="zs"><span class="icon"></span>招商</li>
-                  <li data-selector="paypal-method" class="paypal"><span class="icon"></span></li>
-                </ul>
-                <h2>支付金额</h2>
-                <div class="pay-wrapper">
-                  <div class="pay-warn"><strong class="email">备注邮箱<br/>备注邮箱<br/>备注邮箱<br/>备注邮箱<br/>备注邮箱<br/>备注邮箱<br/>备注邮箱</strong></div>
-                  <div class="method alipay-method">
-                    打开手机支付宝扫一扫支付 ¥ <strong class="price">49.9 </strong> 元，支付时请<strong class="email">备注邮箱</strong>。<br>使用邮箱收到的兑换码进行兑换即可升级为高级账户。<div class="icon-method icon-alipay"></div>
-                  </div>
-                  <div class="method weichat-method" style="display:none">
-                    打开手机微信扫一扫支付 ¥ <strong class="price">49.9 </strong> 元，支付时请<strong class="email">备注邮箱</strong>。<br/>使用邮箱收到的兑换码进行兑换即可升级为高级账户。<div class="icon-method icon-weichat"></div>
-                  </div>
-                  <div class="method zs-method" style="display:none">打开手机版招商银行扫一扫支付 ¥ <strong class="price">49.9 </strong> 元，支付时请<strong class="email">备注邮箱</strong>。<br/>使用邮箱收到的兑换码进行兑换即可升级为高级账户。<br/> 你也可以直接转账到账户：<strong>6214 8357 1471 1833</strong>（账户名：何文光）<div class="icon-method icon-zs"></div>
-                  </div>
-                  <div class="method paypal-method" style="display:none"><a target="_blank" href="https://paypal.me/ranhe200">点击这里</a>支付 ¥ <strong class="price">49.9 </strong> 元，支付时请<strong class="email">备注邮箱</strong>。<br/>使用邮箱收到的兑换码进行兑换即可升级为高级账户。</div>
-                  <p>我会最晚在每天的八点前发送兑换码，没有收到兑换码或者付款遇到问题？联系我：邮箱 wenguang.fe@gmail.com</p>
-                </div>
-              </div>
-            </div>
+          <a class="migrate" href="http://circlereader.com/checkout">老的页面已经下线，请点击这里访问新的页面</a>
         </article>
       </div>
     </div>
     <%- include('./includes/footer') %>
   </div>
 </div>
-<script>
-  const price=document.querySelectorAll(".price");const list=document.querySelectorAll(".list");const method=document.querySelectorAll(".method");list.forEach(function(item){item.addEventListener("click",function(event){const target=event.target;if(target.tagName!=="LI"){return}item.querySelectorAll(".active").forEach(function(node){node.classList.remove("active")});target.classList.add("active");const dataprice=target.getAttribute("data-price");const selector=target.getAttribute("data-selector");if(dataprice){price.forEach(function(node){node.innerText=dataprice})}else{if(selector){const node=document.querySelector("."+selector);method.forEach(function(node){node.style.display="none"});node&&(node.style.display="block")}}})});
-</script>
 </body>
 </html>
