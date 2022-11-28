@@ -21,6 +21,12 @@ Q 搜索是一款提高浏览器使用效率的扩展，使用 Q 搜索可以快
 
 [观看详细介绍视频](https://www.bilibili.com/video/BV1jd4y1t71X/)
 
+## 下载
+- [Chrome 浏览器扩展市场](https://chrome.google.com/webstore/detail/q-search/jibacboccpgnplkbadlmcbdgoiljpigp?hl=zh-CN&authuser=0)
+- 无法访问 Chrome 扩展市场或者使用Chrome 浏览器内核（如 360 浏览器等）的浏览器用户可以[点击这里下载](https://ranhe.xyz/post-images/qsearch.zip)
+- [Edge 浏览器扩展市场](https://microsoftedge.microsoft.com/addons/detail/pajcolplkhehpkdahdnooldoafcfaeji)
+- [Firefox 浏览器扩展市场](https://addons.mozilla.org/zh-CN/firefox/addon/qsearch/)
+
 ## 使用
 通过点击浏览器右上角  Q 搜索图标按钮或者按下如下快捷键即可唤起或者退出 Q 搜索面板；输入你要查询的关键词即可。
 
