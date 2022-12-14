@@ -1,0 +1,375 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>使用JavaScript检测打印请求 | 染河学长</title>
+
+<link rel="shortcut icon" href="https://ranhe.xyz/favicon.ico?v=1671027127825">
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://ranhe.xyz/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156433061-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-156433061-3');
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5908416007129457" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            染河学长
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="https://ranhe.xyz" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://circlereader.com/" class="menu gt-a-link">
+                            Circle 阅读助手
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://ranhe.xyz/ishot" class="menu gt-a-link">
+                            Circle 截图助手
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://ranhe.xyz/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://ranhe.xyz/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1671027127825" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    使用JavaScript检测打印请求
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-04-17 ·
+                    </time>
+                    
+                </div>
+                <div class="post-content">
+                    <p>CSS具有受良好支持的机制，仅在用户打印文档（即打印样式表）时才应用更改。它们允许您通过应用仅对打印解释的规则来更改打印机网页的显示方式。这非常适合执行常见任务，例如隐藏不必要的内容，使用对打印更为友好的版式以及调整布局以更好地适合纸张的尺寸和形状。</p>
+<figure data-type="image" tabindex="1"><img src="https://ranhe.xyz/post-images/1618640222844.png" alt="使用JavaScript检测打印请求" loading="lazy"></figure>
+<p>打印样式表非常适合进行打印的演示更改，但是有时您需要JavaScript的全部功能。为了响应JavaScript中的打印请求，您需要浏览器通知您发生了打印请求。</p>
+<h2 id="onbeforeprint-and-onafterprint">onbeforeprint and onafterprint</h2>
+<p>IE5+  触发  onbeforeprint 和 onafterprint 将要打印的活动用户请求页面之前和之后。</p>
+<pre><code>window.onbeforeprint = function() {
+  console.log('This will be called before the user prints.');
+};
+window.onafterprint = function() {
+  console.log('This will be called after the user prints');   
+};
+</code></pre>
+<p>这些事件不是任何规范的一部分，但它们非常方便。因此，Firefox在版本6中增加了对这两个事件的支持。但是，WebKit和Opera不支持事件。因此，出于跨浏览器兼容性的考虑，这些事件不会减少。</p>
+<h2 id="webkit的解决方案">WebKit的解决方案</h2>
+<p>WebKit那里有一个bug（＃19937）可以实现这些事件，但是进展已经停止，因为另一个API的实现已经使此功能成为可能 - window.matchMedia。</p>
+<h2 id="windowmatchmedia">window.matchMedia</h2>
+<p>window.matchMedia API提供了确定当前是否手段document给定匹配的媒体的查询。例如：</p>
+<pre><code>if (window.matchMedia(' (min-width: 600px) ').matches) {  
+    console.log('The viewport is at least 600 pixels wide');
+} else { 
+    console.log('The viewport is less than 600 pixels wide');
+} 
+</code></pre>
+<p>您还可以使用此API添加监听器，只要媒体查询的结果发生更改，监听器便会触发。在上面的示例中，matches 只要视口至少为600px宽，就会满足标准。如果您希望每当视口超过 600 像素阈值时都收到通知，则可以使用以下内容。</p>
+<pre><code>var mediaQueryList = window.matchMedia(' (min-width: 600px) ');
+mediaQueryList.addListener(function(mql) {
+    if (mql.matches) {
+        console.log('The viewport is at least 600 pixels wide');
+    } else {
+        console.log('The viewport is less than 600 pixels wide');
+    }
+});
+</code></pre>
+<p>有趣的是，当用户请求打印文档时，您也可以使用相同的技术来监听正在应用的媒体：</p>
+<pre><code>var mediaQueryList = window.matchMedia('print');
+mediaQueryList.addListener(function(mql) {
+    if (mql.matches) {
+        console.log('onbeforeprint equivalent');
+    } else {
+        console.log('onafterprint equivalent');
+    }
+});
+</code></pre>
+<p>这在Chrome 9+和Safari 5.1中非常有效（除了侦听器在Chrome中触发两次的事实）。但是，即使它们都支持，也不能在Firefox或IE10中使用window.matchMedia。</p>
+<h2 id="更新2012年7月16日">更新（2012年7月16日）</h2>
+<p>我在Firefox的问题跟踪器上针对此缺陷创建了一个错误-https: //bugzilla.mozilla.org/show_bug.cgi?id=774398。收到回复后，我将更新此帖子。</p>
+<h2 id="结合方法">结合方法</h2>
+<p>如果将这两种方法结合使用，则可以在IE 5 +，Firefox 6 +，Chrome 9+和Safari 5.1+中检测打印请求（不幸的是Opera不支持这两种方法）。</p>
+<pre><code>(function() {
+    var beforePrint = function() {
+        console.log('Functionality to run before printing.');
+    };
+    var afterPrint = function() {
+        console.log('Functionality to run after printing');
+    };
+
+    if (window.matchMedia) {
+        var mediaQueryList = window.matchMedia('print');
+        mediaQueryList.addListener(function(mql) {
+            if (mql.matches) {
+                beforePrint();
+            } else {
+                afterPrint();
+            }
+        });
+    }
+
+    window.onbeforeprint = beforePrint;
+    window.onafterprint = afterPrint;
+}());
+</code></pre>
+<p>请注意，您的事件处理程序可能必须处理以下事实：在Chrome中，每个打印请求将调用它们两次。</p>
+<h2 id="检测打印的场景">检测打印的场景</h2>
+<p>在大多数情况下，只需准备打印样式表即可准备要打印的文档。但是我可以想到JavaScript事件的几个实际用法。</p>
+<h3 id="响应式打印图像">响应式打印图像</h3>
+<p>一种用途是代替高质量的图像进行打印。传统上，Web浏览器以72dpi的分辨率显示图像，大多数打印机可以处理300dpi +的图像。尽管某些较新的设备能够以更高的分辨率显示图像，但大多数用户仍在使用以比打印机可处理的分辨率低得多的分辨率显示Web图像的屏幕。</p>
+<p>因此，在用户的屏幕上看起来很好的图像在打印出来时可能看起来模糊且有颗粒感。对于大多数图像来说，这是可以接受的，但是对于定期打印的文档（例如公司徽标）上的突出图像，这可能是一个问题。您可能希望在打印出来时看起来清晰。</p>
+<p>解决此问题的技术包括加载两个图像，默认情况下仅显示较低质量的图像，然后在打印样式表中隐藏低质量图像并显示高质量图像。这种方法的主要缺点是，无论是否要打印页面，最终用户都必须下载两个图像。3G设备上无意或无能力打印文档的用户仍然必须下载您的高分辨率 logo。</p>
+<p>借助在JavaScript中检测打印请求的功能，您可以在用户请求打印页面时即时替换更高质量的图像。</p>
+<pre><code>&lt;img src=&quot;low-quality.jpg&quot; id=&quot;company_logo&quot; alt=&quot;My Company&quot; /&gt;
+
+&lt;script&gt;
+    (function() {
+        var upgradeImage = function() {
+            document.getElementById('company_logo')
+                .setAttribute('src', 'high-quality.png'); 
+        };
+
+        if (window.matchMedia) {
+            var mediaQueryList = window.matchMedia('print');
+            mediaQueryList.addListener(upgradeImage);
+        }
+
+        window.onbeforeprint = upgradeImage;
+    });
+&lt;/script&gt;
+</code></pre>
+<p>这种方法的好处是，从未打印过的用户将不必下载高质量的图像。该技术还可以很好地降低性能。使用不支持打印事件的浏览器的用户将只打印质量较低的图像。</p>
+<h3 id="跟踪打印请求">跟踪打印请求</h3>
+<p>打印事件还可以用来跟踪用户在站点或应用程序中打印页面的次数。由于缺乏全面的浏览器支持，您无法捕获每个打印请求，但这足以使人们大致了解打印频率。</p>
+<pre><code>(function() {
+    var afterPrint = function() {
+        // Here you would send an AJAX request to the server to track that a page
+        // has been printed.  You could additionally pass the URL if you wanted to
+        // track printing across an entire site or application.
+    };
+
+    if (window.matchMedia) {
+        var mediaQueryList = window.matchMedia('print');
+        mediaQueryList.addListener(function(mql) {
+            if (!mql.matches) {
+                afterPrint();
+            }
+        });
+    }
+
+    window.onafterprint = afterPrint;
+}());
+</code></pre>
+<h2 id="我可以在真实应用程序中使用它吗">我可以在“真实”应用程序中使用它吗？</h2>
+<p>当然，只要确定您的操作对使用不会触发该事件的浏览器的用户而言性能会下降。</p>
+<p>您还能想到在JavaScript中检测打印请求的其他实际用途吗？如果是这样，请在评论中让我知道。</p>
+<h2 id="更新2012年7月16日-2">更新（2012年7月16日）</h2>
+<p>根据评论，我发现除了上述所有错误外，某些浏览器还会（onafterprint或使用window.matchMedia处理程序实现）及早触发after print事件。</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;script&gt;
+            var beforePrint = function() {
+                document.getElementById('printImage').src = 
+                    'http://stackoverflow.com/favicon.ico';
+            };
+            var afterPrint = function() {
+                document.getElementById('printImage').src = 
+                    'http://google.com/favicon.ico';
+            };
+
+            if (window.matchMedia) {
+                var mediaQueryList = window.matchMedia('print');
+                mediaQueryList.addListener(function(mql) {
+                    if (mql.matches) {
+                        beforePrint();
+                    } else {
+                        afterPrint();
+                    }
+                });
+            }
+
+            window.onbeforeprint = beforePrint;
+            window.onafterprint = afterPrint;
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;img id=&quot;printImage&quot; src=&quot;http://google.com/favicon.ico&quot; /&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>在打印上述文档时，您实际上希望打印出Stack Overflow的图标，而实际上是在打印Google的图标。这两个事件均会触发，但打印后事件会在实际发生打印之前触发，在这种情况下，这会还原在打印前事件中所做的更改。</p>
+<p>我能够在Chrome和Firefox中重新创建此问题。</p>
+<p>因此，请勿执行任何依赖于“打印后”事件来修复“打印前”事件所做的事情。对于响应式打印图像，这应该不是问题，因为将高质量的图像保留在原处不会有任何危害。用户已经下载了它。</p>
+<h2 id="针对现代浏览器触发两次提供更精确的版本">针对现代浏览器触发两次提供更精确的版本</h2>
+<pre><code>function print(){
+  let printBeforeTimer;
+  let printAfterTimer;
+  function beforePrint() {
+    printBeforeTimer &amp;&amp; clearTimeout(printBeforeTimer);
+    printBeforeTimer = setTimeout(function(){
+      // your code here before print
+    }, 150);
+  }
+  function afterPrint() {
+    printAfterTimer &amp;&amp; clearTimeout(printAfterTimer);
+    printAfterTimer = setTimeout(function(){
+      // your code here after print
+    }, 150);
+  }
+  // IE or Firfox
+  window.addEventListener('beforeprint', beforePrint);
+  window.addEventListener('afterprint', afterPrint);
+  if (!window.matchMedia){
+    return;
+  }
+  // other
+  const mediaQueryList = window.matchMedia('print');
+  mediaQueryList.addEventListener('change', function(mql) {
+    if(mql.matches){
+      beforePrint();
+    } else {
+      afterPrint();
+    }
+  });
+}
+</code></pre>
+
+                </div>
+            </article>
+        </div>
+
+        <!-- 
+            <div class="next-post">
+                <a href="https://ranhe.xyz/how-to-print-article/" class="post-title gt-a-link">
+                    下一篇: 怎么样可以把网页文章干净地打印下来？
+                </a>
+            </div>
+         -->
+
+        
+
+        
+            
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+<script>
+    // md5.min.js
+    !function(n){
+        "use strict";
+        function d(n,t){var r=(65535&n)+(65535&t);return(n>>16)+(t>>16)+(r>>16)<<16|65535&r}
+        function f(n,t,r,e,o,u){return d((c=d(d(t,n),d(e,u)))<<(f=o)|c>>>32-f,r);var c,f}
+        function l(n,t,r,e,o,u,c){return f(t&r|~t&e,n,t,o,u,c)}
+        function v(n,t,r,e,o,u,c){return f(t&e|r&~e,n,t,o,u,c)}
+        function g(n,t,r,e,o,u,c){return f(t^r^e,n,t,o,u,c)}
+        function m(n,t,r,e,o,u,c){return f(r^(t|~e),n,t,o,u,c)}
+        function i(n,t){var r,e,o,u,c;n[t>>5]|=128<<t%32,n[14+(t+64>>>9<<4)]=t;var f=1732584193,i=-271733879,a=-1732584194,h=271733878;for(r=0;r<n.length;r+=16)f=l(e=f,o=i,u=a,c=h,n[r],7,-680876936),h=l(h,f,i,a,n[r+1],12,-389564586),a=l(a,h,f,i,n[r+2],17,606105819),i=l(i,a,h,f,n[r+3],22,-1044525330),f=l(f,i,a,h,n[r+4],7,-176418897),h=l(h,f,i,a,n[r+5],12,1200080426),a=l(a,h,f,i,n[r+6],17,-1473231341),i=l(i,a,h,f,n[r+7],22,-45705983),f=l(f,i,a,h,n[r+8],7,1770035416),h=l(h,f,i,a,n[r+9],12,-1958414417),a=l(a,h,f,i,n[r+10],17,-42063),i=l(i,a,h,f,n[r+11],22,-1990404162),f=l(f,i,a,h,n[r+12],7,1804603682),h=l(h,f,i,a,n[r+13],12,-40341101),a=l(a,h,f,i,n[r+14],17,-1502002290),f=v(f,i=l(i,a,h,f,n[r+15],22,1236535329),a,h,n[r+1],5,-165796510),h=v(h,f,i,a,n[r+6],9,-1069501632),a=v(a,h,f,i,n[r+11],14,643717713),i=v(i,a,h,f,n[r],20,-373897302),f=v(f,i,a,h,n[r+5],5,-701558691),h=v(h,f,i,a,n[r+10],9,38016083),a=v(a,h,f,i,n[r+15],14,-660478335),i=v(i,a,h,f,n[r+4],20,-405537848),f=v(f,i,a,h,n[r+9],5,568446438),h=v(h,f,i,a,n[r+14],9,-1019803690),a=v(a,h,f,i,n[r+3],14,-187363961),i=v(i,a,h,f,n[r+8],20,1163531501),f=v(f,i,a,h,n[r+13],5,-1444681467),h=v(h,f,i,a,n[r+2],9,-51403784),a=v(a,h,f,i,n[r+7],14,1735328473),f=g(f,i=v(i,a,h,f,n[r+12],20,-1926607734),a,h,n[r+5],4,-378558),h=g(h,f,i,a,n[r+8],11,-2022574463),a=g(a,h,f,i,n[r+11],16,1839030562),i=g(i,a,h,f,n[r+14],23,-35309556),f=g(f,i,a,h,n[r+1],4,-1530992060),h=g(h,f,i,a,n[r+4],11,1272893353),a=g(a,h,f,i,n[r+7],16,-155497632),i=g(i,a,h,f,n[r+10],23,-1094730640),f=g(f,i,a,h,n[r+13],4,681279174),h=g(h,f,i,a,n[r],11,-358537222),a=g(a,h,f,i,n[r+3],16,-722521979),i=g(i,a,h,f,n[r+6],23,76029189),f=g(f,i,a,h,n[r+9],4,-640364487),h=g(h,f,i,a,n[r+12],11,-421815835),a=g(a,h,f,i,n[r+15],16,530742520),f=m(f,i=g(i,a,h,f,n[r+2],23,-995338651),a,h,n[r],6,-198630844),h=m(h,f,i,a,n[r+7],10,1126891415),a=m(a,h,f,i,n[r+14],15,-1416354905),i=m(i,a,h,f,n[r+5],21,-57434055),f=m(f,i,a,h,n[r+12],6,1700485571),h=m(h,f,i,a,n[r+3],10,-1894986606),a=m(a,h,f,i,n[r+10],15,-1051523),i=m(i,a,h,f,n[r+1],21,-2054922799),f=m(f,i,a,h,n[r+8],6,1873313359),h=m(h,f,i,a,n[r+15],10,-30611744),a=m(a,h,f,i,n[r+6],15,-1560198380),i=m(i,a,h,f,n[r+13],21,1309151649),f=m(f,i,a,h,n[r+4],6,-145523070),h=m(h,f,i,a,n[r+11],10,-1120210379),a=m(a,h,f,i,n[r+2],15,718787259),i=m(i,a,h,f,n[r+9],21,-343485551),f=d(f,e),i=d(i,o),a=d(a,u),h=d(h,c);return[f,i,a,h]}
+        function a(n){var t,r="",e=32*n.length;for(t=0;t<e;t+=8)r+=String.fromCharCode(n[t>>5]>>>t%32&255);return r}
+        function h(n){var t,r=[];for(r[(n.length>>2)-1]=void 0,t=0;t<r.length;t+=1)r[t]=0;var e=8*n.length;for(t=0;t<e;t+=8)r[t>>5]|=(255&n.charCodeAt(t/8))<<t%32;return r}
+        function e(n){var t,r,e="0123456789abcdef",o="";for(r=0;r<n.length;r+=1)t=n.charCodeAt(r),o+=e.charAt(t>>>4&15)+e.charAt(15&t);return o}
+        function r(n){return unescape(encodeURIComponent(n))}
+        function o(n){return a(i(h(t=r(n)),8*t.length));var t}
+        function u(n,t){return function(n,t){var r,e,o=h(n),u=[],c=[];for(u[15]=c[15]=void 0,16<o.length&&(o=i(o,8*n.length)),r=0;r<16;r+=1)u[r]=909522486^o[r],c[r]=1549556828^o[r];return e=i(u.concat(h(t)),512+8*t.length),a(i(c.concat(e),640))}(r(n),r(t))}
+        function t(n,t,r){return t?r?u(t,n):e(u(t,n)):r?o(n):e(o(n))}
+        "function"==typeof define&&define.amd?define(function(){return t}):"object"==typeof module&&module.exports?module.exports=t:n.md5=t;
+    }(this);
+</script>
+
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '8cccbea12249ca5d4afe',
+    clientSecret: '22499a6d9573adaa2762b80a4b9e0c66762c16f2',
+    repo: 'hewenguang.github.io',
+    owner: 'hewenguang',
+    admin: ['hewenguang'],
+    id: md5(location.pathname),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false       // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+            
+
+            
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+ 豫ICP备2021020010号-1 ｜<a href="https://ranhe.xyz/atom.xml" target="_blank">RSS</a>｜<a href="https://ranhe.xyz/agreement" target="_blank">用户协议</a>｜<a href="https://ranhe.xyz/privacy" target="_blank">隐私政策</a>
+</div>
+    </div>
+</div>
+</body>
+</html>

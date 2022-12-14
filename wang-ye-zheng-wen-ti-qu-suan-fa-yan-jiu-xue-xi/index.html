@@ -1,0 +1,269 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>网页正文提取算法研究学习 | 染河学长</title>
+
+<link rel="shortcut icon" href="https://ranhe.xyz/favicon.ico?v=1671027127825">
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://ranhe.xyz/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156433061-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-156433061-3');
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5908416007129457" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            染河学长
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="https://ranhe.xyz" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://circlereader.com/" class="menu gt-a-link">
+                            Circle 阅读助手
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://ranhe.xyz/ishot" class="menu gt-a-link">
+                            Circle 截图助手
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://ranhe.xyz/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://ranhe.xyz/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1671027127825" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    网页正文提取算法研究学习
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-03-17 ·
+                    </time>
+                    
+                        <a href="https://ranhe.xyz/zheng-wen-ti-qu/" class="post-tags">
+                            # 正文提取
+                        </a>
+                    
+                        <a href="https://ranhe.xyz/qian-duan-kai-fa/" class="post-tags">
+                            # 前端开发
+                        </a>
+                    
+                        <a href="https://ranhe.xyz/liu-lan-qi/" class="post-tags">
+                            # 浏览器
+                        </a>
+                    
+                        <a href="https://ranhe.xyz/yue-du-mo-shi/" class="post-tags">
+                            # 阅读模式
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <figure data-type="image" tabindex="1"><img src="https://ranhe.xyz/post-images/1615962620318.jpeg" alt="网页正文提取算法研究" loading="lazy"></figure>
+<h2 id="引言">引言</h2>
+<p>网站数据的抓取分析是当今众多互联网业务中非常重要的组成部分，舆情分析、网络搜索、定向广告等都涉及到大量的数据采集分析。面对采集下来的各种各样的网页，分析并识别正文则是一个更加具有挑战性的工作</p>
+<p>本文档分为如下部分：</p>
+<ul>
+<li>业界存在的识别算法简介和对比</li>
+<li>针对普遍使用的 <a href="https://github.com/mozilla/readability">Readability</a> 进行具体介绍</li>
+<li>怎样实现一套更优的算法？</li>
+</ul>
+<h2 id="背景">背景</h2>
+<p>​互联网上海量网页数据，分析和挖掘其中价值的第一步就是识别出真正的正文，剔除页面无关的噪音，从而更好的分析。然而面对千奇百怪的页面布局和展示，分别为每个页面制作一个页面解析模板不仅耗时耗力，当页面改版以后之前的工作都将失去意义</p>
+<h2 id="业界已有算法">业界已有算法</h2>
+<p>针对这种情况，业界为了提高效率，通过不同的算法实现了自动的正文提取。下面我们分别简单说明相关的实现</p>
+<h3 id="正文密度">正文密度</h3>
+<p><strong>介绍</strong></p>
+<p>基于正文密度的算法是遍历页面所有只包含文本节点的 dom 节点。遍历当前 dom 节点，当节点内的文本数量占比整个页面所有的文本数量大于 0.4 则认为是正文区域，否则继续遍及父级节点</p>
+<p><strong>缺点</strong></p>
+<p>基于正文密度的算法针对英文页面有很好的效果，对于中文类含有噪音较多的网页会存在识别区域大于正文区域的情况，且针对图片内容等类型网页则无能为力</p>
+<p><strong>代表</strong></p>
+<p>Chrome 扩展  <a href="https://chrome.google.com/webstore/detail/just-read/dgmanlpmmkibanfdgjocnabmcaclkmod">just-read</a> 使用该算法，通过 css 解决了 识别区域大于正文区域的情况，具体做法是通过 css 隐藏掉 footer 、header、comment、ad 等类名和标签名。虽然可以达到较高的准确率但是会存在误伤正文的情况</p>
+<h3 id="文本特征">文本特征</h3>
+<p><strong>介绍</strong></p>
+<p>基于文本特征的算法是识别页面所有的文本区域，根据正文的特征来识别正文。特征如：标签符号的数量，文本长度的峰值变化等特征来识别正文</p>
+<p><strong>缺点</strong></p>
+<p>对于图片类内容仍然是无能为力</p>
+<p><strong>代表</strong></p>
+<p>Chrome 自带的阅读模式（开启方法： 在 chrome://flags 页面搜索 read mode 启动）</p>
+<h3 id="权值计算">权值计算</h3>
+<p><strong>介绍</strong></p>
+<p>对于正文特征进行权值计算，使用特征为： 标点符号数量、正文长度、正文链接密度。通过对以上特征的加权计算，对于得分加权到父级节点，并赋予祖父节点一半的权值。最后找出权值最高的 dom 节点就是正文节点</p>
+<p><strong>缺点</strong></p>
+<p>该算法需要解析DOM树，因此执行效率稍微慢一些。因为是加权对 dom 赋值计算，针对常规 div 包裹 p 标签类型的网页可以达到 100% 识别率，但是对于不按套路出牌的网页则会存在丢失正文的情况。如:正文使用多个 div 包裹，最后使用一个 div 把这些 div 包起来，这样权值计算之后会识别其中一个 div 导致其他正文丢失</p>
+<p><strong>代表</strong></p>
+<p>Safari 的阅读模式。该算法在 safari 进行了更多的优化，识别率更高。原始代码基于大名鼎鼎的 arc90 实验室的 Readability 。该算法已经商业化实现了 firefox ，chrome 插件及 flipboard 。目前火狐浏览器使用的源代码开源了，地址 ： <a href="https://github.com/mozilla/readability">Readability</a></p>
+<h3 id="readability-深究">Readability 深究</h3>
+<p>通过一个超简化版本来深入浅出研究 Readability，你可以直接在文字多的网页控制台运行查看识别效果</p>
+<pre><code class="language-js">let maybeNode = {
+  score:0,
+};
+const nodes = document.body.getElementsByTagName('p');
+for(var i = 0, len = nodes.length; i &lt; len; i++){
+  const node = nodes[i];
+  let score = 1;
+  const text = node.innerText;
+  score += text.split(/：|。|；|，|,|\.|\?|”/).length;
+  score += Math.min(Math.floor(text.length / 100), 3);
+  typeof node.score !== 'number' &amp;&amp; (node.score = 0);
+  node.score += score;
+  node.setAttribute('score', node.score);
+  node.score &gt; maybeNode.score &amp;&amp; (maybeNode = node);
+  let index = 0;
+  let tempNode = node.parentElement;
+  while (tempNode &amp;&amp; tempNode.tagName !== 'BODY'){
+    if(/div|article|section/i.test(tempNode.tagName)){
+      typeof tempNode.score !== 'number' &amp;&amp; (tempNode.score = 0);
+      tempNode.score += score / (index &lt; 2 ? index + 2 : index * 3);
+      tempNode.setAttribute('score', tempNode.score);
+      tempNode.score &gt; maybeNode.score &amp;&amp; (maybeNode = tempNode);
+      if (++index &gt;= 3) {
+        break;
+      }
+    }
+    tempNode = tempNode.parentElement;
+  }
+}
+maybeNode &amp;&amp; (maybeNode.style.border = '1px solid red');
+</code></pre>
+<h3 id="如何实现一套更优的算法">如何实现一套更优的算法</h3>
+<p>正如上面所说，不同的算法都含有一定的缺点。我们如何实现一套更好的算法呢 ？</p>
+<p>目前只有 Readability 的表现可圈可点，因此我们基于 Readability 来做思考</p>
+<p>单页应用？图片类网页？iframe 类网页？</p>
+
+                </div>
+            </article>
+        </div>
+
+        <!-- 
+            <div class="next-post">
+                <a href="https://ranhe.xyz/circle-faq/" class="post-title gt-a-link">
+                    下一篇: 常见问题 - Circle 阅读模式
+                </a>
+            </div>
+         -->
+
+        
+
+        
+            
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+<script>
+    // md5.min.js
+    !function(n){
+        "use strict";
+        function d(n,t){var r=(65535&n)+(65535&t);return(n>>16)+(t>>16)+(r>>16)<<16|65535&r}
+        function f(n,t,r,e,o,u){return d((c=d(d(t,n),d(e,u)))<<(f=o)|c>>>32-f,r);var c,f}
+        function l(n,t,r,e,o,u,c){return f(t&r|~t&e,n,t,o,u,c)}
+        function v(n,t,r,e,o,u,c){return f(t&e|r&~e,n,t,o,u,c)}
+        function g(n,t,r,e,o,u,c){return f(t^r^e,n,t,o,u,c)}
+        function m(n,t,r,e,o,u,c){return f(r^(t|~e),n,t,o,u,c)}
+        function i(n,t){var r,e,o,u,c;n[t>>5]|=128<<t%32,n[14+(t+64>>>9<<4)]=t;var f=1732584193,i=-271733879,a=-1732584194,h=271733878;for(r=0;r<n.length;r+=16)f=l(e=f,o=i,u=a,c=h,n[r],7,-680876936),h=l(h,f,i,a,n[r+1],12,-389564586),a=l(a,h,f,i,n[r+2],17,606105819),i=l(i,a,h,f,n[r+3],22,-1044525330),f=l(f,i,a,h,n[r+4],7,-176418897),h=l(h,f,i,a,n[r+5],12,1200080426),a=l(a,h,f,i,n[r+6],17,-1473231341),i=l(i,a,h,f,n[r+7],22,-45705983),f=l(f,i,a,h,n[r+8],7,1770035416),h=l(h,f,i,a,n[r+9],12,-1958414417),a=l(a,h,f,i,n[r+10],17,-42063),i=l(i,a,h,f,n[r+11],22,-1990404162),f=l(f,i,a,h,n[r+12],7,1804603682),h=l(h,f,i,a,n[r+13],12,-40341101),a=l(a,h,f,i,n[r+14],17,-1502002290),f=v(f,i=l(i,a,h,f,n[r+15],22,1236535329),a,h,n[r+1],5,-165796510),h=v(h,f,i,a,n[r+6],9,-1069501632),a=v(a,h,f,i,n[r+11],14,643717713),i=v(i,a,h,f,n[r],20,-373897302),f=v(f,i,a,h,n[r+5],5,-701558691),h=v(h,f,i,a,n[r+10],9,38016083),a=v(a,h,f,i,n[r+15],14,-660478335),i=v(i,a,h,f,n[r+4],20,-405537848),f=v(f,i,a,h,n[r+9],5,568446438),h=v(h,f,i,a,n[r+14],9,-1019803690),a=v(a,h,f,i,n[r+3],14,-187363961),i=v(i,a,h,f,n[r+8],20,1163531501),f=v(f,i,a,h,n[r+13],5,-1444681467),h=v(h,f,i,a,n[r+2],9,-51403784),a=v(a,h,f,i,n[r+7],14,1735328473),f=g(f,i=v(i,a,h,f,n[r+12],20,-1926607734),a,h,n[r+5],4,-378558),h=g(h,f,i,a,n[r+8],11,-2022574463),a=g(a,h,f,i,n[r+11],16,1839030562),i=g(i,a,h,f,n[r+14],23,-35309556),f=g(f,i,a,h,n[r+1],4,-1530992060),h=g(h,f,i,a,n[r+4],11,1272893353),a=g(a,h,f,i,n[r+7],16,-155497632),i=g(i,a,h,f,n[r+10],23,-1094730640),f=g(f,i,a,h,n[r+13],4,681279174),h=g(h,f,i,a,n[r],11,-358537222),a=g(a,h,f,i,n[r+3],16,-722521979),i=g(i,a,h,f,n[r+6],23,76029189),f=g(f,i,a,h,n[r+9],4,-640364487),h=g(h,f,i,a,n[r+12],11,-421815835),a=g(a,h,f,i,n[r+15],16,530742520),f=m(f,i=g(i,a,h,f,n[r+2],23,-995338651),a,h,n[r],6,-198630844),h=m(h,f,i,a,n[r+7],10,1126891415),a=m(a,h,f,i,n[r+14],15,-1416354905),i=m(i,a,h,f,n[r+5],21,-57434055),f=m(f,i,a,h,n[r+12],6,1700485571),h=m(h,f,i,a,n[r+3],10,-1894986606),a=m(a,h,f,i,n[r+10],15,-1051523),i=m(i,a,h,f,n[r+1],21,-2054922799),f=m(f,i,a,h,n[r+8],6,1873313359),h=m(h,f,i,a,n[r+15],10,-30611744),a=m(a,h,f,i,n[r+6],15,-1560198380),i=m(i,a,h,f,n[r+13],21,1309151649),f=m(f,i,a,h,n[r+4],6,-145523070),h=m(h,f,i,a,n[r+11],10,-1120210379),a=m(a,h,f,i,n[r+2],15,718787259),i=m(i,a,h,f,n[r+9],21,-343485551),f=d(f,e),i=d(i,o),a=d(a,u),h=d(h,c);return[f,i,a,h]}
+        function a(n){var t,r="",e=32*n.length;for(t=0;t<e;t+=8)r+=String.fromCharCode(n[t>>5]>>>t%32&255);return r}
+        function h(n){var t,r=[];for(r[(n.length>>2)-1]=void 0,t=0;t<r.length;t+=1)r[t]=0;var e=8*n.length;for(t=0;t<e;t+=8)r[t>>5]|=(255&n.charCodeAt(t/8))<<t%32;return r}
+        function e(n){var t,r,e="0123456789abcdef",o="";for(r=0;r<n.length;r+=1)t=n.charCodeAt(r),o+=e.charAt(t>>>4&15)+e.charAt(15&t);return o}
+        function r(n){return unescape(encodeURIComponent(n))}
+        function o(n){return a(i(h(t=r(n)),8*t.length));var t}
+        function u(n,t){return function(n,t){var r,e,o=h(n),u=[],c=[];for(u[15]=c[15]=void 0,16<o.length&&(o=i(o,8*n.length)),r=0;r<16;r+=1)u[r]=909522486^o[r],c[r]=1549556828^o[r];return e=i(u.concat(h(t)),512+8*t.length),a(i(c.concat(e),640))}(r(n),r(t))}
+        function t(n,t,r){return t?r?u(t,n):e(u(t,n)):r?o(n):e(o(n))}
+        "function"==typeof define&&define.amd?define(function(){return t}):"object"==typeof module&&module.exports?module.exports=t:n.md5=t;
+    }(this);
+</script>
+
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '8cccbea12249ca5d4afe',
+    clientSecret: '22499a6d9573adaa2762b80a4b9e0c66762c16f2',
+    repo: 'hewenguang.github.io',
+    owner: 'hewenguang',
+    admin: ['hewenguang'],
+    id: md5(location.pathname),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false       // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+            
+
+            
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+ 豫ICP备2021020010号-1 ｜<a href="https://ranhe.xyz/atom.xml" target="_blank">RSS</a>｜<a href="https://ranhe.xyz/agreement" target="_blank">用户协议</a>｜<a href="https://ranhe.xyz/privacy" target="_blank">隐私政策</a>
+</div>
+    </div>
+</div>
+</body>
+</html>
